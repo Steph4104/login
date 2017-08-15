@@ -17,42 +17,57 @@ class Login extends Component {
     return (
       <div>
 <img src={logo} alt='Government canada logo'/>
-        <h4 className='mv3'>{this.state.login ? 'Login' : 'Sign Up'}</h4>
+        <h1 className='mv3'>{this.state.login ? 'GCTools Sign In' : 'Sign Up'}</h1>
         <div className='flex flex-column'>
           {!this.state.login &&
+<div>
+	<label htmlFor='username'>Username</label>
           <input
             value={this.state.name}
             onChange={(e) => this.setState({ name: e.target.value })}
             type='text'
+		name='username'
             placeholder='Your name'
-          />}
+          />
+</div>}
+	<label htmlFor='email'>Username or Email</label>
           <input
             value={this.state.email}
             onChange={(e) => this.setState({ email: e.target.value })}
             type='text'
+		name='email'
             placeholder='Your email address'
           />
+<label htmlFor="password">Password</label>
           <input
             value={this.state.password}
             onChange={(e) => this.setState({ password: e.target.value })}
             type='password'
+name='password'
             placeholder='Choose a safe password'
           />
         </div>
         <div className='flex mt3'>
           <div
-            className='pointer mr2 button'
+            className='pointer  button'
             onClick={() => this._confirm()}
           >
-            {this.state.login ? 'login' : 'create account' }
+            {this.state.login ? 'Sign In' : 'create account' }
           </div>
-          <div
-            className='pointer button'
+</div>
+
+<div className='remember'><input type="checkbox" name="remember" value="remember" /><label htmlFor='remember'>Remember me</label>
+</div>
+<div className='problems'><a href='#'>Problems with sign in?</a></div>
+<div className="noaccount"><p> Don`t have an account?</p>  
+          <span
+            className='register'
             onClick={() => this.setState({ login: !this.state.login })}
           >
-            {this.state.login ? 'need to create an account?' : 'already have an account?'}
-          </div>
-        </div>
+            {this.state.login ? 'Register' : 'already have an account?'}
+          </span>
+</div>
+        
       </div>
     )
   }
