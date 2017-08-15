@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { GC_USER_ID, GC_AUTH_TOKEN } from '../constants'
 import { gql, graphql, compose } from 'react-apollo'
+import logo from '../img/govt-of-canada-logo.png';
 
 class Login extends Component {
 
@@ -15,6 +16,7 @@ class Login extends Component {
 
     return (
       <div>
+<img src={logo} alt='Government canada logo'/>
         <h4 className='mv3'>{this.state.login ? 'Login' : 'Sign Up'}</h4>
         <div className='flex flex-column'>
           {!this.state.login &&
