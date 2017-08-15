@@ -8,18 +8,33 @@ class Header extends Component {
 render() {
   const userId = localStorage.getItem(GC_USER_ID)
   return (
-    <div className='flex pa1 justify-between nowrap orange'>
-      <div className='flex flex-fixed black'>
-        <div className='fw7 mr1'>Hacker News</div>
-        <Link to='/' className='ml1 no-underline black'>new</Link>
-  <div className='ml1'>|</div>
-  <Link to='/search' className='ml1 no-underline black'>search</Link>
-        {userId &&
+  
+    <div className=''> {/* flex pa1 justify-between nowrap orange */}
+
+      <div className=''> {/* flex flex-fixed black */}
+
+
+
+
+      {userId &&
         <div className='flex'>
           <div className='ml1'>|</div>
           <Link to='/create' className='ml1 no-underline black'>submit</Link>
         </div>
         }
+
+ {userId &&
+        <div className='flex'>
+        <div className='fw7 mr1'>Hacker News</div>
+ 
+        <Link to='/' className='ml1 no-underline black'>new</Link>
+  <div className='ml1'>|</div>
+
+  <Link to='/search' className='ml1 no-underline black'>search</Link>
+        </div>
+        }
+
+
       </div>
       <div className='flex flex-fixed'>
         {userId ?
@@ -32,7 +47,7 @@ render() {
           <Link to='/login' className='ml1 no-underline black'>login</Link>
         }
       </div>
-    </div>
+   </div>
   )
 }
 
