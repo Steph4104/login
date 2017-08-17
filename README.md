@@ -1,3 +1,20 @@
+Installation step
+
+- npm install -g graphcool
+- graphcool init --schema https://graphqlbin.com/hn-starter.graphql --name Hackernews
+-
+- npm install -g create-react-app
+- create-react-app hackernews-react-apollo
+- sudo npm react-apollo
+- sudo npm react-router-dom
+- graphcool console
+    -> Integration -> email-password-auth -> enable
+    
+- npm install subscriptions-transport-ws
+
+https://www.howtographql.com/react-apollo/0-introduction/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
