@@ -2,11 +2,11 @@ Installation step
 
 - npm install -g graphcool
 - 
--
+- sudo apt-get install nodejs-legacy
 - npm install -g create-react-app
 - create-react-app hackernews-react-apollo
-- sudo npm react-apollo
-- sudo npm react-router-dom
+- sudo npm install react-apollo
+- sudo npm install react-router-dom
 - npm install subscriptions-transport-ws
 - npm start
 - copy directory src and public
